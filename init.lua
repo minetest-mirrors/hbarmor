@@ -1,9 +1,4 @@
-local S
-if (minetest.get_modpath("intllib")) then
-	S = intllib.Getter()
-else
-	S = function ( s ) return s end
-end
+local S = minetest.get_translator("hbarmor")
 
 if (not armor) or (not armor.def) then
 	minetest.log("error", "[hbarmor] Outdated 3d_armor version. Please update your version of 3d_armor!")
@@ -65,7 +60,7 @@ local function custom_hud(player)
 end
 
 --register and define armor HUD bar
-hb.register_hudbar("armor", 0xFFFFFF, S("Armor"), { icon = "hbarmor_icon.png", bgicon = "hbarmor_bgicon.png", bar = "hbarmor_bar.png" }, 0, 100, hbarmor.autohide, S("%s: %d%%"))
+hb.register_hudbar("armor", 0xFFFFFF, S("Armor"), { icon = "hbarmor_icon.png", bgicon = "hbarmor_bgicon.png", bar = "hbarmor_bar.png" }, 0, 100, hbarmor.autohide, S("@1: @2%"))
 
 function hbarmor.get_armor(player)
 	if not player or not armor.def then

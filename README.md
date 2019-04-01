@@ -17,7 +17,7 @@ By default, the armor bar is hidden if the player wears no armor.
 
 ## Dependencies
 * HUD bars [`hudbars`], major version 1
-* 3D Armor [`3d_armor`] (tested with Minetest 0.4.14)
+* 3D Armor [`3d_armor`] (tested with Minetest 5.0.0)
 
 ## Licensing
 This mod is entirly free softare.
